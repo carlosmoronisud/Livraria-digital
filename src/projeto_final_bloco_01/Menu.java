@@ -46,16 +46,16 @@ public class Menu {
         System.out.println("0. Sair");
         System.out.print(Cores.TEXT_YELLOW + "Opção: " + Cores.TEXT_RESET);
     }
-
+//pega erros
     private static int lerOpcao() {
         try {
             return leia.nextInt();
         } catch (Exception e) {
-            leia.nextLine(); // Limpa o buffer
-            return -1; // Valor inválido
+            leia.nextLine(); 
+            return -1; 
         }
     }
-
+//Metodos simples
     private static void processarOpcao(int opcao) {
         switch(opcao) {
             case 1:
@@ -82,7 +82,7 @@ public class Menu {
         }
         projetoFinalExceptions.keyPress();
     }
-    
+    //Cadastro Livro físico
     private static void cadastrarLivroFisico() {
         System.out.println(Cores.TEXT_GREEN_BOLD + "\nCadastrar Livro Físico\n" + Cores.TEXT_RESET);
         
@@ -107,7 +107,7 @@ public class Menu {
         
         System.out.println(Cores.TEXT_GREEN + "Livro físico cadastrado com sucesso!" + Cores.TEXT_RESET);
     }
-
+//Cadastro livros Digital
     private static void cadastrarEbook() {
         System.out.println(Cores.TEXT_GREEN_BOLD + "\nCadastrar E-book\n" + Cores.TEXT_RESET);
         
@@ -128,7 +128,7 @@ public class Menu {
         
         System.out.println(Cores.TEXT_GREEN + "E-book cadastrado com sucesso!" + Cores.TEXT_RESET);
     }
-
+//Listando os livros
     private static void listarTodos() {
         System.out.println(Cores.TEXT_BLUE_BOLD + "\nLista de Todos os Livros\n" + Cores.TEXT_RESET);
         
@@ -140,7 +140,7 @@ public class Menu {
             livros.forEach(Livro::visualizar);
         }
     }
-
+// Buscando por id
     private static void buscarPorId() {
         System.out.println(Cores.TEXT_BLUE_BOLD + "\nBuscar Livro por ID\n" + Cores.TEXT_RESET);
         
@@ -156,7 +156,7 @@ public class Menu {
             System.out.println(Cores.TEXT_RED + "Livro não encontrado!" + Cores.TEXT_RESET);
         }
     }
-
+//Atualizando
     private static void atualizarLivro() {
         System.out.println(Cores.TEXT_PURPLE_BOLD + "\nAtualizar Livro\n" + Cores.TEXT_RESET);
         
@@ -213,7 +213,7 @@ public class Menu {
             System.out.println(Cores.TEXT_RED + "Erro ao atualizar o livro." + Cores.TEXT_RESET);
         }
     }
-
+//Deletando
     private static void deletarLivro() {
         System.out.println(Cores.TEXT_RED_BOLD + "\nDeletar Livro\n" + Cores.TEXT_RESET);
         
@@ -245,6 +245,8 @@ public class Menu {
         }
         
     }
+    //Metodo auxiliar para exeptions
+    
     private static int lerInteiro(String mensagem) {
         while (true) {
             try {
@@ -272,6 +274,7 @@ public class Menu {
             }
         }
     }
+    //Metodo de finalização
     public static void sobre() {
     	System.out.println("\n*********************************************************");
     	System.out.println("Projeto Desenvolvido por: ");
