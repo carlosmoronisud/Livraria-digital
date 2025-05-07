@@ -2,26 +2,27 @@ package Model;
 
 import java.text.NumberFormat;
 
-public abstract class  Livro {
-	
-	private int id;
+public abstract class Livro {
+    private int id;
     private String nome;    
     private String autor;
     private int tipo;
     private double preco;
     
     public Livro(int id, String nome, String autor, int tipo, double preco) {
-		this.id = id;
-		this.nome = nome;
-		this.autor = autor;
-		this.tipo = tipo;
-		this.preco = preco;
-	}
-	
-	
-	public int getId() {
+        this.id = id;
+        this.nome = nome;
+        this.autor = autor;
+        this.tipo = tipo;
+        this.preco = preco;
+    }
+
+ 
+    
+    public int getId() {
 		return id;
 	}
+
 
 
 	public void setId(int id) {
@@ -29,9 +30,11 @@ public abstract class  Livro {
 	}
 
 
+
 	public String getNome() {
 		return nome;
 	}
+
 
 
 	public void setNome(String nome) {
@@ -39,9 +42,11 @@ public abstract class  Livro {
 	}
 
 
+
 	public String getAutor() {
 		return autor;
 	}
+
 
 
 	public void setAutor(String autor) {
@@ -49,9 +54,11 @@ public abstract class  Livro {
 	}
 
 
+
 	public int getTipo() {
 		return tipo;
 	}
+
 
 
 	public void setTipo(int tipo) {
@@ -59,9 +66,11 @@ public abstract class  Livro {
 	}
 
 
+
 	public double getPreco() {
 		return preco;
 	}
+
 
 
 	public void setPreco(double preco) {
@@ -69,37 +78,23 @@ public abstract class  Livro {
 	}
 
 
-	
-	//Visualização
-	
-		public void visualizar(){
-			
-			NumberFormat nfMoeda = NumberFormat.getCurrencyInstance();
-			
-			String tipo = "";
-			
-			switch(this.tipo) {
-			case 1 -> tipo = "Livro fisíco: ";
-			case 2 -> tipo = "Ebook: ";
-			default -> tipo = "Inválido!";
-			}
-			
-			System.out.println("============================");
-			System.out.println("        Dados do Livro     ");
-			System.out.println("=============================");
-			System.out.println("Nome: " + this.nome);
-			System.out.println("Autor: " + this.autor);
-			System.out.println("Tipo do livro: " + tipo);	
-			System.out.println("Preço: " + nfMoeda.format(this.preco));
-			
-		}
 
-
-		public void liberacao(String acesso) {
-			// TODO Auto-generated method stub
-			
-		}
+	public void visualizar() {
+        NumberFormat nfMoeda = NumberFormat.getCurrencyInstance();
+        String tipoStr = switch(this.tipo) {
+            case 1 -> "Livro Físico";
+            case 2 -> "E-book";
+            default -> "Tipo Inválido";
+        };
+        
+        System.out.println("\n=== DETALHES DO LIVRO ===");
+        System.out.println("ID: " + this.id);
+        System.out.println("Título: " + this.nome);
+        System.out.println("Autor: " + this.autor);
+        System.out.println("Tipo: " + tipoStr);
+        System.out.println("Preço: " + nfMoeda.format(this.preco));
+    }
 	
-		
-	   
+
+    public abstract void liberacao();
 }

@@ -1,35 +1,28 @@
 package Model;
 
-public class ebook extends Livro {
-	
-	public ebook(int id, String nome, String autor, int tipo, double preco, String acesso) {
-		super(id, nome, autor, tipo, preco);
-		// TODO Auto-generated constructor stub
-	}
+public class Ebook extends Livro {
+    private int acesso;  
+    public Ebook(int id, String nome, String autor, int tipo, double preco, int acesso) {
+        super(id, nome, autor, tipo, preco);
+        this.acesso = acesso;
+    }
 
-	private String acesso;
+    @Override
+    public void liberacao() {
+        String status = switch(this.acesso) {
+            case 1 -> "Liberado para download";
+            case 2 -> "Acesso restrito (pendente de pagamento)";
+            default -> "Status desconhecido";
+        };
+        System.out.println(status);
+    }
 
-	public String getAcesso() {
-		return acesso;
-	}
+    // Getters e Setters 
+    public int getAcesso() {
+        return acesso;
+    }
 
-	public void setAcesso(String acesso) {
-		this.acesso = acesso;
-	}
-	public void liberacao(String acesso){		
-		
-		switch(this.acesso) {
-		case "1" ->acesso = "Liberado ";
-		case "2" -> acesso = "Restrito ";
-		default -> acesso = "Inválido!";
-		}
-	}
-
-	public void visualizar() {	
-		super.visualizar();
-		System.out.println("Quantidade em estoque:  " + acesso);
-	}
-	
-
-		
+    public void setAcesso(int acesso) {
+        this.acesso = acesso;
+    }
 }
