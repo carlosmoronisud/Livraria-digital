@@ -35,6 +35,7 @@ public class LivroController {
         for (int i = 0; i < listaLivros.size(); i++) {
             Livro livro = listaLivros.get(i);
             if (livro.getId() == livroAtualizado.getId()) {
+            	
                 // Preserva o tipo específico do livro
                 if (livro instanceof LivroFisico && livroAtualizado instanceof LivroFisico) {
                     LivroFisico atual = (LivroFisico) livro;

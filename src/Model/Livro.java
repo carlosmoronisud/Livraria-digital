@@ -17,7 +17,7 @@ public abstract class Livro {
         this.preco = preco;
     }
 
- 
+ //Get e Set
     
     public int getId() {
 		return id;
