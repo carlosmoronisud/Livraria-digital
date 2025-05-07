@@ -13,6 +13,18 @@ Projeto Java desenvolvido para o gerenciamento de uma livraria online, implement
 - `Git/GitHub`
 - `STS/Eclipse`
 
+<<<<<<< HEAD
+=======
+## 📂 Estrutura do Projeto
+projeto_final_bloco_01/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── model/
+│   │   │   │   ├── Produto.java
+│   │   │   │   ├── Livro.java
+│   │   │   │  
+>>>>>>> ff6bff5048a00aff725ddb64394431038bf35999
 
 
 ## ⚙️ Funcionalidades
