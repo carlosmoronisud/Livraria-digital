@@ -1,4 +1,4 @@
-package conta_bancaria.util;
+package projetoFinal.util;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Classe para gerenciar as exceções personalizadas do sistema bancário
  */
-public class BancoExceptions {
+public class projetoFinalExceptions {
     
     /**
      * Classe de exceção para operações de entrada/saída

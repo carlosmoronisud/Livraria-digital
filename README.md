@@ -13,24 +13,6 @@ Projeto Java desenvolvido para o gerenciamento de uma livraria online, implement
 - `Git/GitHub`
 - `STS/Eclipse`
 
-## 📂 Estrutura do Projeto
-bookstore/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ ├── model/
-│ │ │ │ ├── Produto.java (classe abstrata)
-│ │ │ │ ├── Livro.java (classe abstrata)
-│ │ │ │ ├── LivroFisico.java
-│ │ │ │ └── Ebook.java
-│ │ │ ├── repository/
-│ │ │ │ └── ProdutoRepository.java
-│ │ │ ├── controller/
-│ │ │ │ └── ProdutoController.java
-│ │ │ └── Menu.java (main)
-│ │ └── resources/
-├── .gitignore
-└── README.md
 
 
 ## ⚙️ Funcionalidades

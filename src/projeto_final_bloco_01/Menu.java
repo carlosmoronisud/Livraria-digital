@@ -2,8 +2,8 @@ package projeto_final_bloco_01;
 
 import java.util.Scanner;
 
-import conta_bancaria.util.BancoExceptions;
-import conta_bancaria.util.Cores;
+import projetoFinal.util.projetoFinalExceptions;
+import projetoFinal.util.Cores;
 
 public class Menu {
     public static void main(String[] args) {
@@ -35,27 +35,27 @@ public class Menu {
             switch(opcao) {
 	            case 1:
 	                System.out.println("Cadastrar livro físico");
-	                BancoExceptions.keyPress();
+	                projetoFinalExceptions.keyPress();
 	                break;
 	            case 2:
 	            	System.out.println("Cadastrar e-book");
-	            	BancoExceptions.keyPress();
+	            	projetoFinalExceptions.keyPress();
 	                break;
 	            case 3:
 	                System.out.println("Listar");
-	                BancoExceptions.keyPress();
+	                projetoFinalExceptions.keyPress();
 	                break;
 	            case 4:
 	            	System.out.println("Buscar produto por id");
-	            	BancoExceptions.keyPress();
+	            	projetoFinalExceptions.keyPress();
 	                break;
 	            case 5:
 	                System.out.println("Listar apenas livros físicos");
-	                BancoExceptions.keyPress();
+	                projetoFinalExceptions.keyPress();
 	                break;
 	            case 6:
 	            	System.out.println("Listar apenas E-books");
-	            	BancoExceptions.keyPress();
+	            	projetoFinalExceptions.keyPress();
 	                break;
 	                
 	            default:
