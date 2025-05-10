@@ -1,4 +1,4 @@
-package projetoFinal.util;
+package LivrariaDigitalUtil;
  
 public class Cores {
  
@@ -131,6 +131,14 @@ public class Cores {
 		public static final String ANSI_CYAN_BACKGROUND_BRIGHT = "\033[0;106m";  
 
 		public static final String ANSI_WHITE_BACKGROUND_BRIGHT = "\033[0;107m";
+
+		public static final String TEXT_CYAN_BACKGROUND = null;
+
+		public static String TEXT_GREEN_BACKGROUND;
+
+		public static String TEXT_RED_BACKGROUND;
+
+		public static String TEXT_YELLOW_BACKGROUND;
 
 }
  

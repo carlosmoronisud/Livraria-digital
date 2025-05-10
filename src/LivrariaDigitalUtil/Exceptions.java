@@ -1,4 +1,4 @@
-package projetoFinal.util;
+package LivrariaDigitalUtil;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Classe para gerenciar as exceções personalizadas do sistema bancário
  */
-public class projetoFinalExceptions {
+public class Exceptions {
     
     /**
      * Classe de exceção para operações de entrada/saída

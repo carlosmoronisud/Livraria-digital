@@ -1,17 +1,17 @@
-package Model;
+package LivrariaDigitalModel;
 
 import java.text.NumberFormat;
 
 public abstract class Livro {
     private int id;
-    private String nome;    
+    private String titulo;    
     private String autor;
     private int tipo;
     private double preco;
     
-    public Livro(int id, String nome, String autor, int tipo, double preco) {
+    public Livro(int id, String titulo, String autor, int tipo, double preco) {
         this.id = id;
-        this.nome = nome;
+        this.titulo = titulo;
         this.autor = autor;
         this.tipo = tipo;
         this.preco = preco;
@@ -31,14 +31,14 @@ public abstract class Livro {
 
 
 
-	public String getNome() {
-		return nome;
+	public String getTitulo() {
+		return titulo;
 	}
 
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 
@@ -89,7 +89,7 @@ public abstract class Livro {
         
         System.out.println("\n=== DETALHES DO LIVRO ===");
         System.out.println("ID: " + this.id);
-        System.out.println("Título: " + this.nome);
+        System.out.println("Título: " + this.titulo);
         System.out.println("Autor: " + this.autor);
         System.out.println("Tipo: " + tipoStr);
         System.out.println("Preço: " + nfMoeda.format(this.preco));

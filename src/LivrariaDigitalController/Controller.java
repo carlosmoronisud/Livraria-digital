@@ -1,13 +1,14 @@
-package LivroController;
+package LivrariaDigitalController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import Model.Livro;
-import Model.LivroFisico;
-import Model.Ebook;
 
-public class LivroController {
+import LivrariaDigitalModel.Ebook;
+import LivrariaDigitalModel.Livro;
+import LivrariaDigitalModel.LivroFisico;
+
+public class Controller {
     private List<Livro> listaLivros = new ArrayList<>();
     private int idCounter = 1;
 
@@ -48,7 +49,7 @@ public class LivroController {
                 }
                 
                 // Atualiza campos comuns
-                livro.setNome(livroAtualizado.getNome());
+                livro.setTitulo(livroAtualizado.getTitulo());
                 livro.setAutor(livroAtualizado.getAutor());
                 livro.setPreco(livroAtualizado.getPreco());
                 
@@ -61,14 +62,6 @@ public class LivroController {
     // Deletar Livro
     public boolean deletar(int id) {
         return listaLivros.removeIf(livro -> livro.getId() == id);
-    }
-
-    // Listar Livros Físicos
-    public List<LivroFisico> listarLivrosFisicos() {
-        return listaLivros.stream()
-                .filter(l -> l instanceof LivroFisico)
-                .map(l -> (LivroFisico) l)
-                .toList();
     }
 
     // Listar E-books
@@ -84,10 +77,5 @@ public class LivroController {
         return idCounter++;
     }
 
-    // Buscar por Autor
-    public List<Livro> buscarPorAutor(String autor) {
-        return listaLivros.stream()
-                .filter(l -> l.getAutor().equalsIgnoreCase(autor))
-                .toList();
-    }
+    
 }
